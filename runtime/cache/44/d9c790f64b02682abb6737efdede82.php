@@ -1,0 +1,4 @@
+<?php
+//000000003600
+ exit();?>
+a:2:{i:0;a:11:{s:6:"adv_id";i:1;s:5:"ap_id";i:1;s:9:"adv_title";s:16:"首页轮播图1";s:8:"adv_link";s:0:"";s:8:"adv_code";s:17:"5a4341aeb0372.jpg";s:13:"adv_startdate";i:1199116800;s:11:"adv_enddate";i:1830268800;s:8:"adv_sort";i:0;s:11:"adv_enabled";i:1;s:12:"adv_clicknum";i:0;s:11:"adv_bgcolor";N;}i:1;a:11:{s:6:"adv_id";i:2;s:5:"ap_id";i:1;s:9:"adv_title";s:16:"首页轮播图2";s:8:"adv_link";s:0:"";s:8:"adv_code";s:17:"5a4341c011073.jpg";s:13:"adv_startdate";i:1199116800;s:11:"adv_enddate";i:1830268800;s:8:"adv_sort";i:0;s:11:"adv_enabled";i:1;s:12:"adv_clicknum";i:0;s:11:"adv_bgcolor";N;}}

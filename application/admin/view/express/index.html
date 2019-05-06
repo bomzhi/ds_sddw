@@ -1,0 +1,69 @@
+{include file="public/header" /}
+
+
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title">
+            <div class="subject">
+                <h3>快递公司</h3>
+                <h5></h5>
+            </div>
+            {include file="public/admin_items" /}
+        </div>
+    </div>
+    <?php foreach (range('A','Z') as $v){?>
+    <a href="{:url('Express/index')}?letter=<?php echo $v;?>" class="btn btn-small {if $Request.param.letter eq $v}btn-red{else/}btn-default{/if}"><?php echo $v;?></a>&nbsp;&nbsp;
+    <?php }?>
+
+
+    <table class="ds-default-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>{$Think.lang.express_name}</th>
+                <th>{$Think.lang.express_letter}</th>
+                <th>{$Think.lang.express_url}</th>
+                <th>{$Think.lang.express_order}</th>
+                <th>{$Think.lang.express_state}</th>
+                <th>{$Think.lang.zt_express}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {notempty  name="express_list"}
+            {foreach name="express_list" item="v"}
+            <tr>
+                <td></td>
+                <td>{$v.express_name}</td>
+                <td>{$v.express_letter}</td>
+                <td>{$v.express_url}</td>
+                <td class="align-center yes-onoff">
+                    {if $v.express_order == 1}
+                    <a href="JavaScript:void(0);" class=" enabled" ajax_branch='order' ds_type="inline_edit" fieldname="express_order" fieldid="{$v.express_id}" fieldvalue="1" title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+                    {else /}
+                    <a href="JavaScript:void(0);" class=" disabled" ajax_branch='order' ds_type="inline_edit" fieldname="express_order" fieldid="{$v.express_id}" fieldvalue="0"  title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+                    {/if}</td>
+          <td class="align-center yes-onoff">
+              {if $v.express_state == 0}
+              <a href="JavaScript:void(0);" class=" disabled" ajax_branch='state' ds_type="inline_edit" fieldname="express_state" fieldid="{$v.express_id}" fieldvalue="0" title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+             {else /}
+              <a href="JavaScript:void(0);" class=" enabled" ajax_branch='state' ds_type="inline_edit" fieldname="express_state" fieldid="{$v.express_id}" fieldvalue="1"  title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+              {/if}</td>
+          <td class="align-center yes-onoff">
+              {if $v.express_zt_state == 0}
+              <a href="JavaScript:void(0);" class=" disabled" ajax_branch='express_zt_state' ds_type="inline_edit" fieldname="express_zt_state" fieldid="{$v.express_id}" fieldvalue="0" title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+              {else /}
+              <a href="JavaScript:void(0);" class=" enabled" ajax_branch='express_zt_state' ds_type="inline_edit" fieldname="express_zt_state" fieldid="{$v.express_id}" fieldvalue="1"  title="{$Think.lang.ds_editable}"><img src="{$Think.ADMIN_SITE_ROOT}/images/treetable/transparent.gif"></a>
+              {/if}</td>
+            </tr>
+            {/foreach}
+            {else /}
+            <tr class="no_data">
+                <td colspan="20">{$Think.lang.no_record}</td>
+            </tr>
+            {/notempty}
+        </tbody>
+    </table>
+    {$show_page}
+</div>
+
+<script type="text/javascript" src="{$Think.ADMIN_SITE_ROOT}/js/jquery.edit.js" charset="utf-8"></script>

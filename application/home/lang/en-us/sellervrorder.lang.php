@@ -1,0 +1,150 @@
+<?php
+
+
+$lang['store_order_order_sn']		= 'Order sn';
+$lang['store_order_order_sn_search']= 'Enter the order number you want to query';
+$lang['store_order_comp_exp']		= 'Courier company';
+$lang['store_order_goods_detail']		= 'Goods';
+$lang['store_order_goods_single_price']	= 'Unit price (yuan)';
+$lang['store_order_sell_back']			= 'After-sales';
+$lang['store_order_order_stateop']		= 'State and operation';
+$lang['store_order_order_confirm']		= 'Order confirmation';
+$lang['store_order_confirm_order']		= 'Make sure the order';
+$lang['store_order_shipping_order']		= 'Confirm cash on delivery order';
+$lang['store_order_add_time']		= 'Place the order of time';
+$lang['store_order_buyer']			= 'Buyers';
+$lang['store_order_search']			= 'Search';
+$lang['store_order_cancel_order']	= 'Cancel order';
+$lang['store_order_show_deliver']	= 'Check logistics';
+$lang['store_order_buyer_info']		= 'Contact information';
+$lang['store_order_receiver']		= 'Name';
+$lang['store_order_phone']			= 'Phone';
+$lang['store_order_mobile']			= 'Mobile';
+$lang['store_order_email']			= 'E-mail';
+$lang['store_order_area']			= 'City';
+$lang['store_order_address']		= 'Shipping address';
+$lang['store_order_zip_code']		= 'Zip code';
+$lang['store_order_pay_method']		= 'Method of payment';
+$lang['store_order_sum']			= 'Order amount';
+$lang['store_order_state']			= 'Order status';
+$lang['store_order_group']			= 'To snap up';
+$lang['store_order_evaluated']		= 'Have evaluation';
+$lang['store_order_received_price']	= 'Receive payment';
+$lang['store_order_modify_price']	= 'Modify the price';
+$lang['store_order_modify_price_gpriceerror']	= 'The total commodity price cannot be empty and must be a number';
+$lang['store_order_send']			= 'Set up the delivery';
+$lang['store_order_refund']			= 'Refund';
+$lang['store_buyer_confirm']		= 'Refund confirmation';
+$lang['store_order_return']			= 'Return goods';
+$lang['store_order_modify_no']		= 'Modify the number';
+$lang['store_order_view_order']		= 'Order details';
+$lang['store_order_complain']	= 'Complaints';
+$lang['store_order_no_result']		= 'There are no qualified orders';
+$lang['store_order_ensure_cancel']	= 'Do you really want to cancel this order?';
+$lang['store_order_cancel_reason']	= 'Cancel the reason';
+$lang['store_order_lose_goods']		= 'Goods cannot be prepared';
+$lang['store_order_invalid_order']	= 'Not a valid order';
+$lang['store_order_buy_apply']		= "Buyer's request";
+$lang['store_order_other_reason']	= 'Other reasons';
+$lang['store_order_buyer_with']		= 'Buyers';
+$lang['store_order_sn']				= 'Order sn';
+$lang['store_order_modify_rule']	= 'Enter the amount to be modified, which can only be a number';
+$lang['store_order_ensure_receive_fee']	= 'Are you sure you have received the payment';
+$lang['store_order_handle_desc']		= 'Operation note';
+$lang['store_order_shipping_no_null']	= 'Logistics number cannot be emp';
+$lang['store_order_input_shipping_no']	= 'Please enter your logistics number';
+$lang['store_order_shipping_no']		= 'Logistics single number';
+$lang['store_order_want_evaluate']	= 'I want to evaluate';
+$lang['store_show_order_detail']		= 'Order details';
+$lang['store_show_order_info']			= 'Order information';
+$lang['store_show_order_seller_info']	= 'Seller information';
+$lang['store_show_order_store_name']	= 'Shop name';
+$lang['store_show_order_wangwang']		= 'Want want';
+$lang['store_show_order_goods_name']	= 'Goods';
+$lang['store_show_order_amount']		= 'Amount';
+$lang['store_show_order_price']			= 'Unit price (yuan)';
+$lang['store_show_order_tp_fee']		= 'Freight';
+$lang['store_show_order_pay_message']	= 'Payment information';
+$lang['store_show_order_pay_time']		= 'Time of payment';
+$lang['store_show_order_send_time']		= 'Delivery time';
+$lang['store_show_order_finish_time']	= 'Completion time';
+$lang['store_show_order_shipping_info']	= 'Logistics information';
+$lang['store_show_order_receiver']		= 'Consignee';
+$lang['store_show_order_receiver_address']	= 'Shipping address';
+$lang['store_show_order_mobile']			= 'Mobile phone number';
+$lang['store_show_order_buyer_message']		= 'Buyer message';
+$lang['store_show_order_handle_history']	= 'Operating history';
+$lang['store_show_system']				= 'System';
+$lang['store_show_order_at']				= 'In';
+$lang['store_show_order_cur_state']			= 'Order current status';
+$lang['store_show_order_next_state']		= 'Next state';
+$lang['store_show_order_reason']			= 'Why';
+$lang['store_show_order_printorder']		= 'Print out the invoice';
+$lang['store_show_order_shipping_han']		= 'Containing';
+$lang['store_order_tip1']		= 'The platform receives the payment and confirms that the payment collection is completed by the system automatically or manually by the administrator. The seller cannot receive the payment, and the administrator can cancel the unpaid offline payment order';
+$lang['store_order_cancel_success']	= 'The order was successfully cancelled';
+$lang['store_order_edit_ship_success']	= 'Shipping cost has been modified successfully';
+$lang['store_order_none_exist']	= 'The order does not exist';
+$lang['store_order_edit_amount_fail']	    = 'Modified price failure';
+$lang['store_order_edit_amount_success']	= 'Modified price successfully';
+
+//exchange
+$lang['e_exchange_code']	= 'Electronic exchange code';
+$lang['enter_e_exchange_code']	= 'Please enter the electronic exchange code provided by the buyer';
+$lang['store_order_clear']	= 'Remove';
+$lang['store_order_back']	= 'Back';
+$lang['submit_validation']	= 'Submit the validation';
+$lang['exchange_codes_offset_consumption']	= 'Please enter the exchange code provided by the buyer and submit it after checking.';
+$lang['order_message']	= 'Order to leave a message';
+$lang['exchange_successful']	= 'For successful';
+$lang['conversion_code']	= 'Conversion code';
+
+//index
+$lang['check_exchange_code']	= 'Check exchange code';
+$lang['not_show_closed_orders']	= 'Closed orders are not shown';
+$lang['trading_status']	= 'Transaction status';
+$lang['trading_operations']	= 'Trading operations';
+
+//show_order
+$lang['virtual_order_information']	= 'Virtual order information';
+$lang['virtual_order_number']	= 'Virtual number';
+$lang['buyer_space']	= 'Buyers';
+$lang['receive_mobile_phone']	= 'Receive cell phone';
+$lang['transaction_closure']	= 'Trading closed';
+$lang['transaction_closure_cause']	= 'Trading closed for reasons';
+$lang['order_has_been_generated']	= 'Order has been generated, pending payment by the buyer';
+$lang['buyer_payment_process1']	= '1. Buyer has not yet paid for the order.';
+$lang['buyer_payment_process2']	= '2. If the order is an invalid order, you can click';
+$lang['buyer_payment_process3']	= '3. If the buyer does not pay for the order, the system will be in place';
+$lang['buyer_payment_process4']	= 'Automatically close the order.';
+$lang['buyers_payment']	= 'Buyer has paid, electronic exchange code has been issued';
+$lang['buyer_paid_process1']	= '1. The electronic exchange code for this order has been automatically sent to the buyer by the system.';
+$lang['buyer_paid_process2']	= '2. This transaction will be sent from this day to the buyer.';
+$lang['buyer_paid_process3']	= ',After the expiry of the time limit.';
+$lang['generate_orders']	= 'To generate orders';
+$lang['order_generation_time']	= 'Order generation time';
+$lang['complete_payment']	= 'To complete the payment';
+$lang['issue_exchange_code']	= 'Issue exchange code';
+$lang['order_finished']	= 'Order finished';
+$lang['prompt_information1']	= 'Scroll to see if the list is too long for the display area';
+$lang['prompt_information2']	= 'Net pay * commission ratio = commission payable ($)';
+$lang['virtual_order_number']	= 'Virtual order number';
+$lang['place_order_time']	= 'Order time';
+$lang['prompt_information3']	= 'Use time: from this day to this day';
+$lang['prompt_information4']	= ',Overdue and non-refundable';
+$lang['prompt_information5']	= 'Using the';
+$lang['prompt_information6']	= 'Dollar voucher (code';
+
+//controller
+$lang['have_right_operate'] = 'Have the right to operate';
+$lang['exchange_code_format_error'] = 'Exchange code format error, please re - input';
+$lang['exchange_code_not_exist'] = 'Exchange code does not exist';
+$lang['exchange_code_been_used'] = 'Exchange code has been used';
+$lang['exchange_code_expired'] = 'Exchange code has expired, and the expiry date is:';
+$lang['exchange_code_been_applied_refund'] = 'Exchange code has been applied for a refund and cannot be used';
+$lang['payment_been'] = 'Payment has been';
+$lang['exchange_code'] = 'Exchange code';
+$lang['error'] = 'Error';
+
+return $lang
+?>

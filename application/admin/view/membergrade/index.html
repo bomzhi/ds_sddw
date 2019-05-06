@@ -1,0 +1,102 @@
+{include file="public/header" /}
+
+
+
+
+
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title">
+            <div class="subject">
+                <h3>会员等级</h3>
+                <h5></h5>
+            </div>
+            {include file="public/admin_items" /}
+        </div>
+    </div>
+    <div class="explanation" id="explanation">
+        <div class="title" id="checkZoom">
+            <h4 title="{$Think.lang.ds_explanation_tip}">{$Think.lang.ds_explanation}</h4>
+            <span id="explanationZoom" title="{$Think.lang.ds_explanation_close}" class="arrow"></span>
+        </div>
+        <ul>
+            <li class="tips">“会员级别设置”提交后，当会员符合某个级别后将自动升至该级别，请谨慎设置会员级别</li>
+            <li class="tips">建议：一、级别应该是逐层递增，例如“级别2”所需经验值高于“级别1”；二、设置的第一个级别所需经验值应为0；三、信息应填写完整</li>
+        </ul>
+    </div>
+    <form method="post" id="mg_form" name="mg_form" enctype="multipart/form-data">
+        <table class="ds-default-table">
+            <thead>
+                <tr class="thead">
+                    <th colspan="5">会员级别设置：</th>
+                </tr>
+                <tr class="thead">
+                    <th colspan="5"></th>
+                </tr>
+                <tr class="thead">
+                    <th class="align-center">级别</th>
+                    <th class="align-left">经验值</th>
+                </tr>
+            </thead>
+            <tbody id="mg_tbody">
+                <tr id="row_0">
+                    <td class="w108 align-center">V0</td>
+                    <td class="align-left"><input type="text" name="mg[1][exppoints]" value="{$list_setting['member_grade'][1]['exppoints']}" class="w60" readonly/></td>
+                </tr>
+                <tr id="row_1">
+                    <td class="w108 align-center">V1</td>
+                    <td class="align-left"><input type="text" name="mg[2][exppoints]" value="{$list_setting['member_grade'][2]['exppoints']}" class="w60" ds_type="verify" data-param='{"name":"经验值","type":"int"}'/></td>
+                </tr>
+                <tr id="row_2">
+                    <td class="w108 align-center">V2</td>
+                    <td class="align-left"><input type="text" name="mg[3][exppoints]" value="{$list_setting['member_grade'][3]['exppoints']}" class="w60" ds_type="verify" data-param='{"name":"经验值","type":"int"}'/></td>
+                </tr>
+                <tr id="row_3">
+                    <td class="w108 align-center">V3</td>
+                    <td class="align-left"><input type="text" name="mg[4][exppoints]" value="{$list_setting['member_grade'][4]['exppoints']}" class="w60" ds_type="verify" data-param='{"name":"经验值","type":"int"}'/></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><a href="JavaScript:void(0);" class="btn" id="submitBtn"><span>{$Think.lang.ds_submit}</span></a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#submitBtn').click(function () {
+                var result = true;
+                var error = new Array();
+                $("#mg_tbody").find("[ds_type='verify']").each(function () {
+                    if (result) {
+                        data = $(this).val();
+                        if (!data) {
+                            result = false;
+                            //error.push('请将信息填写完整');
+                            error = '请将信息填写完整';
+                        }
+                        //验证类型
+                        if (result) {
+                            var data_str = $(this).attr('data-param');
+                            if (data_str) {
+                                eval("data_str = " + data_str);
+                                switch (data_str.type) {
+                                    case 'int':
+                                        result = (data = parseInt(data)) > 0 ? true : false;
+                                        error = (result == false) ? (data_str.name + '应为整数') : '';
+                                }
+                            }
+                        }
+                    }
+                });
+                if (result) {
+                    $('#mg_form').submit();
+                } else {
+                    layer.alert(error);
+                }
+            });
+        })
+    </script>
+</div>
